@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Mother's Day 💖</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:#f8dce5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* QUESTION CARD */
+
+#questionPage{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:90%;
+    max-width:400px;
+    padding:40px 25px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+h1{
+    color:#ff4d88;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+p{
+    color:#444;
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    align-items:center;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+#yesBtn{
+    background:#ff4d88;
+    color:white;
+    padding:18px 45px;
+    border-radius:22px;
+    font-size:1.3rem;
+    box-shadow:0 8px 20px rgba(255,77,136,0.35);
+}
+
+#noBtn{
+    background:#ececec;
+    color:#333;
+    padding:14px 24px;
+    border-radius:18px;
+    position:relative;
+}
+
+/* FLOWER PAGE */
+
+#flowerPage{
+    display:none;
+    width:100%;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    animation:fadeIn 1s ease;
+}
+
+.message{
+    margin-top:40px;
+    color:#ff4d88;
+    text-align:center;
+    font-size:2rem;
+    font-weight:bold;
+    line-height:1.5;
+    opacity:0;
+    transform:translateY(40px);
+    animation:slideUp 1s ease forwards;
+    animation-delay:0.5s;
+}
+
+/* PIXEL FLOWERS */
+
+.bouquet{
+    position:relative;
+    width:420px;
+    height:300px;
+    image-rendering:pixelated;
+}
+
+.pixel{
+    position:absolute;
+    width:16px;
+    height:16px;
+}
+
+.red{background:#ff3b6b;}
+.darkred{background:#d61f4d;}
+.green{background:#47b36b;}
+.darkgreen{background:#23824b;}
+.wrap1{background:#f5b2c5;}
+.wrap2{background:#ea8fac;}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes slideUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:600px){
+
+    .bouquet{
+        transform:scale(0.7);
+    }
+
+    .message{
+        font-size:1.5rem;
+        padding:0 20px;
+    }
+
+    h1{
+        font-size:1.7rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- QUESTION PAGE -->
+
+<div id="questionPage">
+
+    <div class="card">
+
+        <h1>💖 Hi Mumme 💖</h1>
+
+        <p>Do you love me mumme?</p>
+
+        <div class="buttons">
+
+            <button id="yesBtn" onclick="showFlowers()">
+                YES 💕
+            </button>
+
+            <button id="noBtn">
+                No 😭
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FLOWER PAGE -->
+
+<div id="flowerPage">
+
+    <div class="bouquet">
+
+        <!-- 7 PIXEL ROSES -->
+
+        <!-- ROW 1 -->
+
+        <div class="pixel red" style="top:20px;left:40px;"></div>
+        <div class="pixel darkred" style="top:20px;left:56px;"></div>
+        <div class="pixel red" style="top:36px;left:24px;"></div>
+        <div class="pixel darkred" style="top:36px;left:40px;"></div>
+        <div class="pixel red" style="top:36px;left:56px;"></div>
+        <div class="pixel darkred" style="top:36px;left:72px;"></div>
+
+        <div class="pixel red" style="top:0px;left:140px;"></div>
+        <div class="pixel darkred" style="top:0px;left:156px;"></div>
+        <div class="pixel red" style="top:16px;left:124px;"></div>
+        <div class="pixel darkred" style="top:16px;left:140px;"></div>
+        <div class="pixel red" style="top:16px;left:156px;"></div>
+        <div class="pixel darkred" style="top:16px;left:172px;"></div>
+
+        <div class="pixel red" style="top:20px;left:240px;"></div>
+        <div class="pixel darkred" style="top:20px;left:256px;"></div>
+        <div class="pixel red" style="top:36px;left:224px;"></div>
+        <div class="pixel darkred" style="top:36px;left:240px;"></div>
+        <div class="pixel red" style="top:36px;left:256px;"></div>
+        <div class="pixel darkred" style="top:36px;left:272px;"></div>
+
+        <div class="pixel red" style="top:0px;left:340px;"></div>
+        <div class="pixel darkred" style="top:0px;left:356px;"></div>
+        <div class="pixel red" style="top:16px;left:324px;"></div>
+        <div class="pixel darkred" style="top:16px;left:340px;"></div>
+        <div class="pixel red" style="top:16px;left:356px;"></div>
+        <div class="pixel darkred" style="top:16px;left:372px;"></div>
+
+        <!-- ROW 2 -->
+
+        <div class="pixel red" style="top:90px;left:90px;"></div>
+        <div class="pixel darkred" style="top:90px;left:106px;"></div>
+        <div class="pixel red" style="top:106px;left:74px;"></div>
+        <div class="pixel darkred" style="top:106px;left:90px;"></div>
+        <div class="pixel red" style="top:106px;left:106px;"></div>
+        <div class="pixel darkred" style="top:106px;left:122px;"></div>
+
+        <div class="pixel red" style="top:90px;left:190px;"></div>
+        <div class="pixel darkred" style="top:90px;left:206px;"></div>
+        <div class="pixel red" style="top:106px;left:174px;"></div>
+        <div class="pixel darkred" style="top:106px;left:190px;"></div>
+        <div class="pixel red" style="top:106px;left:206px;"></div>
+        <div class="pixel darkred" style="top:106px;left:222px;"></div>
+
+        <div class="pixel red" style="top:90px;left:290px;"></div>
+        <div class="pixel darkred" style="top:90px;left:306px;"></div>
+        <div class="pixel red" style="top:106px;left:274px;"></div>
+        <div class="pixel darkred" style="top:106px;left:290px;"></div>
+        <div class="pixel red" style="top:106px;left:306px;"></div>
+        <div class="pixel darkred" style="top:106px;left:322px;"></div>
+
+        <!-- STEMS -->
+
+        <div class="pixel green" style="top:52px;left:48px;height:160px;"></div>
+        <div class="pixel green" style="top:32px;left:148px;height:180px;"></div>
+        <div class="pixel green" style="top:52px;left:248px;height:160px;"></div>
+        <div class="pixel green" style="top:32px;left:348px;height:180px;"></div>
+
+        <div class="pixel green" style="top:122px;left:98px;height:100px;"></div>
+        <div class="pixel green" style="top:122px;left:198px;height:100px;"></div>
+        <div class="pixel green" style="top:122px;left:298px;height:100px;"></div>
+
+        <!-- LEAVES -->
+
+        <div class="pixel darkgreen" style="top:140px;left:30px;"></div>
+        <div class="pixel darkgreen" style="top:140px;left:66px;"></div>
+
+        <div class="pixel darkgreen" style="top:120px;left:130px;"></div>
+        <div class="pixel darkgreen" style="top:120px;left:166px;"></div>
+
+        <div class="pixel darkgreen" style="top:140px;left:230px;"></div>
+        <div class="pixel darkgreen" style="top:140px;left:266px;"></div>
+
+        <!-- WRAP -->
+
+        <div class="pixel wrap1" style="top:200px;left:90px;width:240px;height:70px;"></div>
+        <div class="pixel wrap2" style="top:240px;left:130px;width:160px;height:50px;"></div>
+
+    </div>
+
+    <div class="message">
+        Happy Mother’s Day Mumme 💖<br>
+        I Love You 🌹
+    </div>
+
+</div>
+
+<script>
+
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+
+let scale = 1;
+
+noBtn.addEventListener("mouseover", () => {
+
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+
+    scale += 0.15;
+
+    yesBtn.style.transform = `scale(${scale})`;
+
+});
+
+function showFlowers(){
+
+    document.getElementById("questionPage").style.display = "none";
+
+    document.getElementById("flowerPage").style.display = "flex";
+
+}
+
+</script>
+
+</body>
+</html>
